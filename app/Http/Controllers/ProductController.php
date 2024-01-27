@@ -20,7 +20,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $field = $request->validate([
+            "pd_name"=>"required|string",
+            "pd_type"=>"required|integer",
+            "pd_price"=>"required|double"
+        ]);
     }
 
     /**
